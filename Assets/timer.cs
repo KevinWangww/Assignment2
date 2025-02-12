@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
-    public GameObject prefabToSpawn; // 要生成的Prefab
-    private float t; // 计时器
+    private float t; // time
     Slider slider;
 
     void Start()
     {
-        slider = GetComponent<Slider>();
+        slider = GetComponent<Slider>(); // get slider to show the time
     }
 
     private void Update()
     {
+        // time changing
         t += Time.deltaTime;
         slider.value = t % slider.maxValue;
     }
