@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cannon : MonoBehaviour
 {
-    public GameObject targetPrefab; // 要生成的Prefab
+    public GameObject targetPrefab; // Prefab to be generated
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +19,13 @@ public class cannon : MonoBehaviour
 
     public void move(float i)
     {
-        //根据DriveSlider的位置移动cannon的位置
+        //Move the cannon according to the position of the DriveSlider
         transform.position = new Vector2(i, -3.65f);
     }
 
     public void fire()
     {
-        //当按下按钮后创建新的prefab
+        //Creates a new prefab when the button is pressed
         GameObject newTarget = Instantiate(targetPrefab);
         newTarget.transform.position = transform.position;
     }
