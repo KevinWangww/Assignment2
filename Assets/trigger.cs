@@ -27,7 +27,7 @@ public class trigger : MonoBehaviour
         }
     }
 
-    //Controlling the size of an object with the ScaleSlidere 
+    //Controlling the size of an object with the ScaleSlider
     public void setScale(float i)
     {
         transform.localScale = new Vector2(i,i);
